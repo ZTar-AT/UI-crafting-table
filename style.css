@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(220, 220, 220);
+}
+
+::-webkit-scrollbar {
+    position: absolute;
+    width: 0.5vw;
+
+    border-radius: 10px;
+    background: #0000005a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2f98f5;
+    border-radius: 10px;
+}
+
+.main_tag {
+    top: 0.5vw;
+    width: 100%;
+    height: 1vw;
+
+    position: absolute;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1vw;
+    font-family: "Barlow", sans-serif;
+}
+
+.main_tag::after {
+    content: "";
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    margin-left: 0.5vw;
+    background-image: url("img/inbox.png");
+    background-size: 1vw;
+}
+
+.main_tag2 {
+    top: 7vw;
+    width: 90%;
+    height: 1vw;
+
+    position: absolute;
+
+    text-align: start;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1vw;
+    font-family: "Barlow", sans-serif;
+}
+
+.main_tag2::before {
+    content: "";
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    margin-left: -1.5vw;
+    background-image: url("img/box.png");
+    background-size: 1vw;
+}
+
+.main {
+    position: absolute;
+    width: 80vw;
+    height: 45vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    grid-template-rows: 20% 80%;
+}
+
+.memu1 {
+    width: 10vw;
+    height: 100%;
+    padding-top: 1.5%;
+    position: relative;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1vw;
+    font-family: "Barlow", sans-serif;
+}
+
+.memu1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10vw;
+    height: 10%;
+    border-radius: 0.7vw;
+    background-color: #2f98f5;
+}
+
+.topmenu {
+    display: grid;
+    align-items: center;
+    justify-items: self-start;
+
+    padding: 0% 2%;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 1%;
+    width: 98%;
+    height: 3.6vw;
+    border-radius: 0.7vw;
+    background-color: #00000088;
+}
+
+.containerTable {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    grid-template-columns: 30% 70%;
+}
+
+.wrapTable {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-rows: 35% 65%;
+}
+
+.item_left,
+.item_top,
+.item_bottom {
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+    border-radius: 0.7vw;
+
+    background-color: #00000088;
+}
+
+.item_wrap {
+    height: 100%;
+    width: 98%;
+    display: block;
+    padding: 2% 4% 4% 4%;
+    border-radius: 0.7vw;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.item_top {
+    width: 100%;
+    height: 97%;
+}
+
+.item_bottom {
+    bottom: 0;
+    height: 97%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.box_itme {
+    position: relative;
+    border-radius: 0.7vw;
+    margin-top: 3%;
+    width: 100%;
+    height: 5vw;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 7vw auto;
+    background-color: #0000005a;
+}
+
+.box_itme>img {
+    margin: 0.25vw 1vw;
+    width: 4.5vw;
+    height: 4.5vw;
+}
+
+.box_itme>.tag {
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2vw;
+    font-family: "Barlow", sans-serif;
+}
+
+.item_top>.box_itme {
+    margin-top: 1%;
+    width: 100%;
+    height: 90%;
+    background-color: transparent;
+}
+
+.item_top>.box_itme>img {
+    margin: 0.25vw 1vw;
+
+    width: 10vw;
+    height: 8vw;
+}
+
+.item_top>.box_itme {
+    grid-template-columns: 15vw auto;
+}
+
+.tag_wrap {
+    margin-left: 5%;
+    width: 90%;
+}
+
+.tag_wrap>.tag {
+    width: 100%;
+    color: white;
+
+    font-weight: bold;
+    font-size: 1.7vw;
+    font-family: "Barlow", sans-serif;
+}
+
+.tag_wrap>.tag:nth-child(2) {
+    width: 100%;
+    color: white;
+
+    font-weight: bold;
+    font-size: 1vw;
+    font-family: "Barlow", sans-serif;
+}
+
+.tagname {
+    width: 100%;
+    color: white;
+    padding-top: 1vw;
+    padding-left: 2vw;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 1vw;
+    font-family: "Barlow", sans-serif;
+}
+
+.itemList,
+.crafting {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.crafting {
+    position: relative;
+
+    background-color: transparent;
+}
+
+.crafting>.tagname {
+    top: 0;
+    position: absolute;
+}
+
+.itemList>.item_wrap {
+    position: absolute;
+
+    margin-top: 1vw;
+    height: 85%;
+    width: 98%;
+
+    display: block;
+    padding: 2% 4% 4% 4%;
+    border-radius: 0.7vw;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Handle */
+#white::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+.itemList>.item_wrap>.box_itme {
+    position: relative;
+    border-radius: 0.7vw;
+    margin-top: 3%;
+    width: 100%;
+    height: 4vw;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-items: center;
+    grid-template-columns: 4vw auto 4vw;
+    background-color: transparent;
+}
+
+.itemList>.item_wrap>.box_itme>img {
+    margin: 0.25vw 0.25vw;
+
+    width: 3vw;
+    height: 3vw;
+}
+
+.itemList>.item_wrap>.box_itme>.tag {
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8vw;
+
+    font-family: "Barlow", sans-serif;
+}
+
+.price {
+    width: 100%;
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.8vw;
+
+    font-family: "Barlow", sans-serif;
+}
+
+.crafting_wrap {
+    width: 100%;
+
+    height: 45%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 5vw auto auto;
+    transform: translate(-50%, -50%);
+}
+
+.crafting_circle {
+    width: 100%;
+
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 100px 50px auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.progress {
+    width: 90%;
+    height: 3vw;
+    border-radius: 1vw;
+    background-color: #0000005a;
+}
+
+.bar {
+    width: 90%;
+    height: 100%;
+    border-radius: 1vw;
+    background-color: #2f98f5;
+}
+
+.quantity {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: auto auto auto;
+}
+
+.tag_quantity {
+    width: 100%;
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.8vw;
+
+    font-family: "Barlow", sans-serif;
+}
+
+.num {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: auto auto auto;
+}
+
+.num_tag {
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.7vw;
+    text-align: center;
+    width: 2vw;
+    border-radius: 0.2vw;
+    background-color: #0000005a;
+    font-family: "Barlow", sans-serif;
+}
+
+.delete,
+.add {
+    position: relative;
+    width: 1vw;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.7vw;
+    cursor: pointer;
+
+    font-family: "Barlow", sans-serif;
+}
+
+.delete:hover,
+.add:hover {
+    text-shadow: 0 0 0.5vw #ff0000, 0 0 0.5vw #0000ff;
+}
+
+.total {
+    width: 100%;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.8vw;
+
+    font-family: "Barlow", sans-serif;
+}
+
+.total::before {
+    content: "";
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    margin-left: -1.5vw;
+    background-image: url("img/dollar.png");
+    background-size: 1vw;
+}
+
+.confirm {
+    width: 50%;
+    padding-top: 0.5vw;
+    height: 2vw;
+    border-radius: 0.5vw;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1vw;
+    background: linear-gradient(90deg,
+            rgba(0, 150, 226, 1) 0%,
+            rgba(0, 129, 211, 1) 100%);
+    font-family: "Barlow", sans-serif;
+}
+
+.box1 {
+    position: relative;
+    display: block;
+
+    width: 280px;
+    height: 280px;
+
+    border: 3px solid #222;
+    border-radius: 50%;
+    transform: scale(0.3);
+}
+
+.progress1 {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    border-radius: 50%;
+}
+
+.progress1 svg {
+    width: 300px;
+    height: 300px;
+    transform: rotate(-90deg);
+}
+
+.progress1 circle {
+    stroke: #067dfd;
+}
+
+.progress-bar {
+    fill: transparent;
+    stroke-width: 10;
+    stroke-linecap: round;
+    
+    transition: 0.3s ease;
+}
+
+
+
+
+
+
+.pointer {
+
+    fill: #fff;
+    stroke-width: 3;
+
+    transform-origin: 50% 50%;
+    transform: rotate(182deg) translate(13px);
+    transition: all 0.3s ease 0s;
+}
+
+.num_progress {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 49px;
+
+    font-family: "Barlow", sans-serif;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+    .crafting_circle {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .crafting_circle {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+    .crafting_circle {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 2000px) {
+    .box1 {
+        transform: scale(0.5);
+    }
+
+    .crafting_circle {
+        grid-template-rows: 100px 100px auto;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@media only screen and (min-width: 2000px) and (max-width: 2500px) {
+    .box1 {
+        transform: scale(0.6);
+    }
+
+    .crafting_circle {
+        grid-template-rows: 100px 160px 20px;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+@media only screen and (min-width: 2501px) {
+    .box1 {
+        transform: scale(0.6);
+    }
+
+    .crafting_circle {
+        grid-template-rows: 120px 200px 30px;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
